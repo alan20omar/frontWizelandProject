@@ -20,6 +20,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+// Socket IO
+import { SocketIoModule } from 'ngx-socket-io';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,8 @@ import { MatCardModule } from '@angular/material/card';
     MatAutocompleteModule,
     MatButtonModule,
     MatCardModule,
+    // Socket
+    SocketIoModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

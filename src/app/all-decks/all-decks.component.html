@@ -11,7 +11,7 @@
             </ng-container>
           </mat-card-content>
         <mat-card-actions align="end">
-          <button mat-button>LIKE</button>
+          <button mat-button (click)="notifyFavorite(deck.userId)">Me gusta</button>
         </mat-card-actions>
     </mat-card>
 </div>

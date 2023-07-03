@@ -57,4 +57,12 @@ export class ApiYgoService {
     };
     return this.httpclient.delete<Deck>(`${API_YGO_BASE_URL}/deck/card`, { params });
   }
+  // Favorite
+  getNotifyFavorite(name: string, likedUser: string): Observable<any> {
+    const params = {
+      name,
+      likedUser,
+    };
+    return this.httpclient.get<any>(`${API_YGO_BASE_URL}/favorite`, { params });
+  }
 }
