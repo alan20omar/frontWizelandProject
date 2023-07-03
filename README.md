@@ -24,6 +24,11 @@ Decks de la comunidad
 + Las cartas tienen un zoom manteniendo el click
 + Cada carta se puede agregar al deck personal
 
+## Usuario
+
+Barra de navegación
++ Se puede cambiar de usuario ingresando un nombre en el campo del navbar a la derecha
+
 # Proyecto
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
