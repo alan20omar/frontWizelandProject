@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+    <div class="container-fluid">
+        <div class="navbar-brand" >YGO Project</div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav w-100 align-items-center">
+                <div [routerLink]="['']" routerLinkActive="active" class="nav-link cursor-pointer">Inicio</div>
+                <div [routerLink]="['decks']" routerLinkActive="active" class="nav-link cursor-pointer">Mi Deck</div>
+                <div [routerLink]="['all-decks']" routerLinkActive="active" class="nav-link cursor-pointer">Decks</div>
+                <form (submit)="setName()" class="nav-link w-auto ms-0 ms-sm-auto" [formGroup]="userForm">
+                    <input input="text" value="{{userService.user?.name}}" placeholder="Ingresa un alias" class="nav-link w-auto text-center p-0" formControlName="name" title="Ingresa tu alias">
+                </form>
+            </div>
+        </div>
+    </div>
+</nav>

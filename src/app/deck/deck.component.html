@@ -1,1 +1,13 @@
-<p>deck works!</p>
+<div class="container mt-3">
+    <h1 class="text-center">Explora tu deck</h1>
+    <div *ngIf="!deckService.deck.cards.length" class="col-12">
+        <div class="searchbar alert alert-danger m-auto text-center" role="alert">
+            {{deckService.mensaje}}
+        </div>
+    </div>
+    <div class="d-flex flex-wrap w-100 justify-content-evenly px-0 px-sm-5 col-12">
+        <ng-container *ngFor="let card of deckService.deck.cards">
+            <app-card [card]="card" [remove]="true" class="mw-100"></app-card>
+        </ng-container>
+    </div>
+</div>

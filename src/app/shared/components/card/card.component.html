@@ -1,1 +1,10 @@
-<p>card works!</p>
+
+<div class="m-1 p-0 list-group list-group-item list-group-item-action mw-100 position-relative cartaB">
+    <img #img loading="lazy" [src]="card?.card_images?.[0]?.image_url" alt="{{card?.name}}" class="carta" title="Manten el click para agrandar la imagen">
+    <button (click)="addCard(card)" mat-icon-button color="warn" aria-label="Example icon button with a heart icon" class="position-absolute start-0" title="Añadir al deck">
+        <mat-icon>favorite</mat-icon>
+    </button>
+    <button *ngIf="remove" (click)="removeCard(card)" mat-icon-button color="warn" aria-label="Example icon button with a heart icon" class="position-absolute end-0" title="Eliminar del deck">
+        <mat-icon>delete</mat-icon>
+    </button>
+</div>

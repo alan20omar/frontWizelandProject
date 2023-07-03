@@ -1,0 +1,17 @@
+<div class="container mt-3">
+    <h1 class="text-center">Decks de la comunidad</h1>
+    <mat-card *ngFor="let deck of deckService.allDecks" class="mb-3">
+        <mat-card-header>
+          <mat-card-title>{{deck.userName}}</mat-card-title>
+          <mat-card-subtitle>Número de cartas: {{deck.cards.length}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content class="d-flex mx-0 mx-sm-3 overflow-scroll">
+            <ng-container *ngFor="let card of deck.cards">
+                <app-card [card]="card" class="mw-100"></app-card>
+            </ng-container>
+          </mat-card-content>
+        <mat-card-actions align="end">
+          <button mat-button>LIKE</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

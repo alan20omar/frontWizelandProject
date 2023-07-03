@@ -1,0 +1,18 @@
+.icon-card {
+    width: 15px;
+};
+
+.icon {
+    width: 20px;
+};
+
+.searchbar {
+    width: 70%;
+    max-width: 100%;
+}
+
+@media (max-width: 576px){
+    .searchbar{
+        width: 95%;
+    }
+};
